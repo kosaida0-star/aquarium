@@ -6,7 +6,11 @@ color:white;
 text-align:center;
 font: white;
 }
-
+p2{
+  color: white;
+  font: white;
+  font-color: white;
+}
 canvas{
 display:block;
 margin:40px auto;
@@ -25,4 +29,5 @@ line-height:1.6;
 margin-top:0;
 font-size:26px;
 }
+
 
