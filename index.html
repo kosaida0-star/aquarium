@@ -1,12 +1,51 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>p5 Organism</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
-    <script src="script.js"></script>
-  </body>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Generative Organism</title>
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+<script defer src="script.js"></script>
+</head>
+
+<body>
+
+<div class="canvas-container"></div>
+
+<div class="explanation">
+<h2>Explanation of Changes</h2>
+
+<p>
+In my version of the program I changed several parts of the code to modify the shape, movement, and colors of the organism. 
+The program uses math functions like sin(), cos(), and atan2() to transform the original (x, y) coordinates into a curved organic structure. 
+These functions create waves and circular motion that form the shape of the organism.
+</p>
+
+<p>
+I increased the canvas size from 400x400 to 600x900 so there is more space for the animation. 
+I also used background(0, 8), which makes the background slightly transparent. Because of this, previous points are not completely erased, 
+so the moving shape leaves a fading trail behind it.
+</p>
+
+<p>
+I changed the animation speed by updating the time variable from t += PI / 20 to t += 3. 
+The variable t controls how the sine waves change over time, so increasing it makes the organism move faster.
+</p>
+
+<p>
+To modify the shape, I stretched the x coordinate by multiplying it by 1.8. 
+This makes the figure wider and creates a horizontal oval shape. 
+I also reduced the vertical scaling by changing d * 9 to d * 3.2 so the organism becomes flatter instead of tall.
+</p>
+
+<p>
+Finally, I changed the color calculation. The RGB values depend on the variable d, 
+which is related to distance in the system. Because of this the color gradually changes 
+across the organism, creating a red to pink gradient.
+</p>
+
+</div>
+
+</body>
 </html>
