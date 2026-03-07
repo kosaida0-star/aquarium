@@ -1,56 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Generative Organism</title>
-<link rel="stylesheet" href="style.css">
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
-<script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <title>Generative Organism</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <script defer src="script.js"></script>
 </head>
-
 <body>
 
-<div class="canvas-container"></div>
+  <div id="canvas-holder"></div>
 
-<div class="explanation">
-<h2>Explanation of Changes</h2>
+  <div class="explanation">
+    <h2>Explanation of Changes</h2>
 
-<p>
-In my version of the program I changed several parts of the code to modify the shape, movement, and colors of the organism. 
-The program uses math functions like sin(), cos(), and atan2() to transform the original (x, y) coordinates into a curved organic structure. 
-These functions create waves and circular motion that form the shape of the organism.
-</p>
+    <p>
+      In my version of the program I modified several parameters of the mathematical system to change the shape, movement, and appearance of the organism. The program uses trigonometric functions such as <code>sin()</code>, <code>cos()</code>, and <code>atan2()</code> to transform normal <code>(x, y)</code> coordinates into a curved organic structure. These functions create wave patterns that generate the shape of the organism.
+    </p>
 
-<p>
-I increased the canvas size from 400x400 to 600x900 so there is more space for the animation. 
-I also used background(0, 8), which makes the background slightly transparent. Because of this, previous points are not completely erased, 
-so the moving shape leaves a fading trail behind it.
-</p>
+    <p>
+      First, I increased the canvas size to <code>600 × 450</code> so the drawing has more horizontal space. I also used <code>background(255, 8)</code> instead of a fully solid background. The second value adds transparency, which means the previous frame is not completely erased. Because of this, the moving points leave a fading trail behind them, creating a tail-like effect.
+    </p>
 
-<p>
-I changed the animation speed by updating the time variable from t += PI / 20 to t += 3. 
-The variable t controls how the sine waves change over time, so increasing it makes the organism move faster.
-</p>
+    <p>
+      I increased the probability of drawing points by changing the random condition to <code>random() &lt; 0.007</code>. This produces more points on each frame, making the organism appear denser and smoother.
+    </p>
 
-<p>
-To modify the shape, I stretched the x coordinate by multiplying it by 1.8. 
-This makes the figure wider and creates a horizontal oval shape. 
-I also reduced the vertical scaling by changing d * 9 to d * 3.2 so the organism becomes flatter instead of tall.
-</p>
+    <p>
+      To modify the shape, I stretched the horizontal coordinate by multiplying the x component by <code>3</code> in the equation <code>xCoord = (q + wave) * 3 * sin(c)</code>. This makes the figure wider and creates a horizontal oval shape. I also changed the rotation formula to <code>c = d / 7 + e / 333 - t / 70</code>, which slows the rotation and produces a smoother movement.
+    </p>
 
-<p>
-Finally, I changed the color calculation. The RGB values depend on the variable d, 
-which is related to distance in the system. Because of this the color gradually changes 
-across the organism, creating a red to pink gradient.
-</p>
-
-</div>
-
-
-</div>
+    <p>
+      Finally, I increased the animation speed by changing the time variable to <code>t += 3.3</code>. The variable <code>t</code> controls how the sine waves evolve over time, so increasing it makes the organism move faster while maintaining its flowing motion.
+    </p>
+  </div>
 
 </body>
 </html>
-
-
