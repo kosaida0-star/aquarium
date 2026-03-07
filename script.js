@@ -1,22 +1,26 @@
 let t = 0;
 
 function setup() {
-  createCanvas(600, 900);
-  background(1);
+  let canvas = createCanvas(600, 450);
+  canvas.parent("canvas-holder");
+  background(255);
   strokeWeight(1);
 }
 
 function draw() {
-  background(0, 8);
+  background(255, 8);
+
   for (let y = 0; y < 400; y += 1) {
     for (let x = 0; x < 400; x += 1) {
-      if (random() < 0.0007) organism(x, y);
+      if (random() < 0.007) organism(x, y);
     }
   }
-  t += 3;
+
+  t += 3.3;
 }
 
 function organism(x, y) {
+
   let k = 4 * cos(x / 2) * cos(y / 4);
   let e = y / 10 - 10;
 
@@ -27,9 +31,9 @@ function organism(x, y) {
 
   let wave = k * (3 + 9 / d * sin(d * d - t * 3));
 
-  let c = d / 3 + e / 333 - t / 70;
+  let c = d / 7 + e / 333 - t / 70;
 
-  let xCoord = (q + wave) * 1.8 * sin(c) + 300;
+  let xCoord = (q + wave) * 3 * sin(c) + 300;
   let yCoord = (q + d * 3.2) * cos(c) + 250;
 
   let r = 8000;
