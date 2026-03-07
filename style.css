@@ -1,36 +1,25 @@
 body{
 margin:0;
-background:#000;
+background:#e5e5e5;
 font-family:Arial, sans-serif;
-color:white;
 text-align:center;
-font: white;
-background: gray;
 }
-p2{
-  color: white;
-  font: white;
-  font-color: white;
+
+#canvas-holder{
+margin-top:40px;
 }
+
 canvas{
 display:block;
-margin:40px auto;
+margin:0 auto;
+background:white;
 }
 
 .explanation{
-max-width:750px;
+max-width:700px;
 margin:40px auto 80px auto;
 padding:25px;
-background: white;
-border-radius:10px;
+background:white;
+border-radius:12px;
 line-height:1.6;
 }
-
-.explanation h2{
-margin-top:0;
-font-size:26px;
-}
-
-
-
-
